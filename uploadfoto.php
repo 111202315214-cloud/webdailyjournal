@@ -17,10 +17,10 @@ function uploadfoto($File){
 	$Allowed = array('jpg', 'png', 'gif', 'jpeg');  
 
 	// Check file size
-	if ($FileSize > 500000) {
-		$message .= "Sorry, your file is too large, max 500KB. ";
-		$uploadOk = 0;
-	}
+	if ($FileSize > 2000000) { 
+        $message .= "Sorry, your file is too large, max 2MB. ";
+        $uploadOk = 0;
+    }
 
 	// Allow certain file formats
 	if(!in_array($FileExt, $Allowed)){
